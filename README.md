@@ -1,36 +1,87 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🌍 GeoSentinel: Real-Time Seismic Intelligence Platform
 
-## Getting Started
+![Project Status](https://img.shields.io/badge/Status-Active-success?style=for-the-badge&logo=activity)
+![Next.js](https://img.shields.io/badge/Next.js-14-black?style=for-the-badge&logo=next.js)
+![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue?style=for-the-badge&logo=typescript)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind-3.0-38bdf8?style=for-the-badge&logo=tailwindcss)
 
-First, run the development server:
+**GeoSentinel**, Türkiye genelindeki sismik aktiviteleri (depremleri) gerçek zamanlı olarak izleyen, analiz eden ve kullanıcıya modern bir arayüzle sunan bir "Sismik İstihbarat" panelidir. 
+
+Sadece veri listelemekle kalmaz; harita üzerinde görselleştirme, büyüklük analizi ve afet anında toplanma alanlarına erişim gibi hayati özellikler sunar.
+
+ *(Buraya projenin ekran görüntüsünü ekleyebilirsiniz)*
+
+## 🚀 Canlı Demo (Live Demo)
+Projenin canlı çalışan halini buradan inceleyebilirsiniz:
+**[🔗 https://geo-sentinel-five.vercel.app/](https://geo-sentinel-five.vercel.app/)**
+
+---
+
+## ⚡ Temel Özellikler (Features)
+
+* **📡 Canlı Veri Akışı:** Kandilli Rasathanesi verileri ile saniyelik senkronizasyon.
+* **🗺️ İnteraktif Harita:** * **Leaflet.js** tabanlı dinamik harita.
+    * **Katmanlar:** Karanlık, Uydu ve Arazi (Terrain) modları arası geçiş.
+    * **Animasyon:** Deprem büyüklüğüne göre değişen "Pulse" efektleri.
+* **🔍 Akıllı Arama ve Filtreleme:**
+    * Şehre veya bölgeye göre anlık arama.
+    * Deprem büyüklüğüne (>3.0, >4.0, >5.0) göre filtreleme.
+* **🛡️ Güvenli Bölgeler:** Olası afet durumunda en yakın toplanma alanlarını harita üzerinde gösterme.
+* **📊 Detaylı Analiz:** Seçilen depremin derinlik, zaman ve tam konum bilgilerini içeren "Drawer" (Kayar Panel) sistemi.
+* **📱 Tam Responsive:** Mobil cihazlarda uygulama hissi veren, masaüstünde ise profesyonel bir dashboard deneyimi sunan duyarlı tasarım.
+* **🎨 UI/UX:** Glassmorphism (Buzlu Cam), Neon efektleri ve Dark Mode ile modern, "Cybersecurity" temalı arayüz.
+
+---
+
+## 🛠️ Teknoloji Yığını (Tech Stack)
+
+Bu proje, modern web geliştirme standartlarına uygun olarak, performans ve ölçeklenebilirlik odaklı geliştirilmiştir.
+
+| Alan | Teknoloji |
+| :--- | :--- |
+| **Framework** | Next.js 14 (App Router) |
+| **Dil** | TypeScript |
+| **Styling** | Tailwind CSS (Custom Animations & Glassmorphism) |
+| **Maps** | Leaflet.js & React-Leaflet |
+| **Data Fetching** | Axios |
+| **Icons** | Lucide React |
+| **Deployment** | Vercel |
+
+---
+
+## ⚙️ Kurulum ve Çalıştırma (Installation)
+
+Projeyi kendi bilgisayarınızda çalıştırmak için şu adımları izleyin:
+
+1.  **Repoyu Klonlayın:**
+    ```bash
+    git clone https://github.com/egnake/geo-sentinel.git
+    cd geo-sentinel
+    ```
+
+2.  **Paketleri Yükleyin:**
+    ```bash
+    npm install
+    ```
+
+3.  **Geliştirme Sunucusunu Başlatın:**
+    ```bash
+    npm run dev
+    ```
+
+4.  Tarayıcınızda `http://localhost:3000` adresine gidin.
+
+---
+
+## 📂 Proje Yapısı
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+src/
+├── app/              # Next.js App Router (Sayfalar)
+├── components/       # UI Bileşenleri (Map, Sidebar, Drawer vb.)
+│   ├── Map.tsx       # Harita Mantığı
+│   ├── Sidebar.tsx   # Veri Listesi ve Filtreler
+│   ├── Drawer.tsx    # Detay Paneli
+│   └── ...
+├── data/             # Statik Veriler (Toplanma Alanları vb.)
+└── styles/           # Global CSS ve Tailwind Ayarları
