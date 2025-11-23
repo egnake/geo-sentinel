@@ -9,7 +9,6 @@
 
 Sadece veri listelemekle kalmaz; harita üzerinde görselleştirme, büyüklük analizi ve afet anında toplanma alanlarına erişim gibi hayati özellikler sunar.
 
- *(Buraya projenin ekran görüntüsünü ekleyebilirsiniz)*
 
 ## 🚀 Canlı Demo (Live Demo)
 Projenin canlı çalışan halini buradan inceleyebilirsiniz:
